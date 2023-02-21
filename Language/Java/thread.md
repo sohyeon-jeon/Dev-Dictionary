@@ -14,7 +14,6 @@ public class Sample {
 }
 // 출력결과 : main
 ```
-
 ### 스레드 실행
 ``` Java
 package jumpToJava;
@@ -34,7 +33,7 @@ public class Sample {
     }
 }
 ```
-<img src="https://www.notion.so/Java-Thread-f9b868e06a314deda5d01d4c8b58984b?pvs=4#82d7cb82770a490bb64aac438906c62b" width="300" hegiht="300">  
+![img](../../img/thread1.JPG)
 
 스레드는 main 스레드가 마쳤다고 해서 프로그램이 종료되지 않는다.  
 모든 스레드가 소멸되야 프로그램이 종료된다.  
@@ -78,7 +77,8 @@ public class Sample {
     }
 }
 ```
-<img src="https://www.notion.so/Java-Thread-f9b868e06a314deda5d01d4c8b58984b?pvs=4#6aac5927cece4314be520193339c4be1">
+![img](../../img/thread2.JPG)
+
 
 **sleep 함수**를 써서 0.1초씩 지연을 줘서 홀수와 짝수 순서대로 나왔지만,  
 스레드와 운영체제 상황에 따라 결과가 달라지기 때문에 이 방법은 잘못된 결과로 이어질 수 있다.  
@@ -109,8 +109,8 @@ public class Sample {
        t2.start();
     }
 ```
-<img src="https://www.notion.so/Java-Thread-f9b868e06a314deda5d01d4c8b58984b?pvs=4#50db98d89d6347448be826532bd6531a">  
-<img src="https://www.notion.so/Java-Thread-f9b868e06a314deda5d01d4c8b58984b?pvs=4#f196980afb694400bf3e2a6a4323607e">
+![img](../../img/thread3.JPG)
+![img](../../img/thread4.JPG)
 
 실행 결과가 뒤죽박죽이다. 각각의 스레드는 `독립적`으로 자신의 일을 수행한다.
 
@@ -136,7 +136,7 @@ public class Sample {
     }
 }
 ```
-<img src="https://www.notion.so/Java-Thread-f9b868e06a314deda5d01d4c8b58984b?pvs=4#43d7f7ccb4d442ff902310187054dcd2">  
+![img](../../img/thread5.JPG)
   
 ## 스레드를 생성하는 방법
 ---
@@ -300,7 +300,7 @@ public class Sample {
     }
 }
 ```
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1cb7b116-bd50-4b36-80f0-bb65dcb25420/Untitled.png)
+![img](../../img/thread6.JPG)
 
 `Executors.newFixedThreadPool(2):` 전달인자가 2이므로 스레드가 2개 존재한다.
 
@@ -337,6 +337,7 @@ public class Sample {
     }
 }
 ```
+![img](../../img/thread7.JPG)
 ### ReentrantLock(synchronized 대신)
 ```java
 package jumpToJava;
