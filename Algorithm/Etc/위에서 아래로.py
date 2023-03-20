@@ -20,3 +20,7 @@ n=int(input())
 array=[int(input()) for _ in range(n)]
 for i in sorted(array,reverse=True):
     print(i,end=' ')
+'''
+n이 500개 이하이고, 범위가 100,000 이하이다.
+선택 정렬, 삽입 정렬, 퀵 정렬, 계수 정렬 아무거나 이용해도 상관없다.
+'''
