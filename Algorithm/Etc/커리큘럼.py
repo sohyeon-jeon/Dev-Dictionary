@@ -76,6 +76,7 @@ for i in range(1,v+1):
         graph[x].append(i)
 
 def topology_sort():
+    # 리스트의 경우, 단순히 대입 연산을 하면 값이 변경될 때, 문제가 발생할 수 있기 때문에 deepcopy()를 써야한다.
     result=copy.deepcopy(time)
     q=deque()
 
