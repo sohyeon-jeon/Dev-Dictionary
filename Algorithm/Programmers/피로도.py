@@ -30,10 +30,11 @@ def dfs(k, cnt, dungeons):
     if cnt > answer:
         answer = cnt
     
-    print(visited)
+    
     for j in range(N):
         if k >= dungeons[j][0] and not visited[j]:
             visited[j] = 1
+            print(visited)
             dfs(k - dungeons[j][1], cnt + 1, dungeons)
             visited[j] = 0
 
