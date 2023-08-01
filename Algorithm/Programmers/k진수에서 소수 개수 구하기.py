@@ -1,9 +1,29 @@
+def primenumber(x):
+    for i in range(2, int(x ** (1 / 2)) + 1):  # 2부터 x-1까지의 모든 숫자
+        if x % i == 0:  # 나눠떨어지는게 하나라도 있으면 False
+            return False
+    return True
+
+
 def solution(n, k):
-    answer = -1
+    answer = 0
+    convert_num = ""
+    while n > 0:
+        n, mod = divmod(n, k)
+        convert_num += str(mod)
+    convert_num = convert_num[::-1]
+
+    # 소수 판별
+
+    arr = convert_num.split("0")
+    for i in arr:
+        if len(i) > 0:
+            if int(i) != 1 and primenumber(int(i)):
+                answer += 1
     return answer
 
 
-solution()
+solution(437674, 3)
 
 
 """
