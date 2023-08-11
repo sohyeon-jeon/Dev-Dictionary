@@ -8,13 +8,19 @@ def solution(S):
     for s in S:
         if s in ["(", "{", "["]:
             stack.append(s)
+        elif not stack:
+            return 0
         elif s == ")" and stack[-1] == "(":
             stack.pop()
         elif s == "}" and stack[-1] == "{":
             stack.pop()
         elif s == "]" and stack[-1] == "[":
             stack.pop()
-    print(stack)
+
+    if not stack:
+        return 1
+    else:
+        return 0
 
 
 # 1 or 0
