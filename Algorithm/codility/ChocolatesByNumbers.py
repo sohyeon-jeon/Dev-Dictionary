@@ -31,6 +31,18 @@ def solution2(N, M):
     return N // M
 
 
+def getGCD(a, b):
+    if a < b:
+        a, b = b, a
+    if a % b == 0:
+        return b
+    return getGCD(b, a % b)
+
+
+def solution3(N, M):
+    return N // getGCD(N, M)
+
+
 def solution(N, M):
     # 최대공약수 이용
     return N // gcd(N, M)
