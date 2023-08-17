@@ -4,7 +4,7 @@
 
 def solution(A):
     n = len(A)
-    # 0부터 n+1까지 헙
+    # 0부터 n+1까지 합
     con_sum = ((n + 1) * (n + 2)) // 2
     return con_sum - sum(A)
 
