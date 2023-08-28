@@ -12,9 +12,12 @@ def solution(A):
 
         while p < q:
             if A[p] + A[q] > A[r]:
+                # p와 q사이 가능한 조합 모두 더해준다
                 count += q - p
+                # q를 왼쪽으로 이동하여 다음으로 작은 값 확인
                 q -= 1
             else:
+                # p를 오른쪽으로 이동하여 다음으로 큰 p값 확인
                 p += 1
 
         if count > 1000000000:
