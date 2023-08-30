@@ -17,7 +17,6 @@ def solution(A):
     return min_abs
 
 
-ㄴ
 # 이중 투포인터 이용
 # 절대값 합 중 최소 리턴
 solution([-8, 4, 5, -10, 3])
