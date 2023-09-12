@@ -32,8 +32,10 @@ for i in range(m):
     length += 1
 
     if length == n:
+        # wl과 sl의 요소 개수가 같으면 순열로 만들수 있는 글자다!
         if wl == sl:
             count += 1
+
         if "a" <= s[start] <= "z":
             sl[ord(s[start]) - ord("a")] -= 1
         else:
