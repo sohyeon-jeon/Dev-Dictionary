@@ -5,7 +5,7 @@ https://school.programmers.co.kr/learn/courses/30/lessons/42586
 import math
 
 
-def solution1(progresses, speeds):
+def solution(progresses, speeds):
     answer = []
     days = []
     for i in range(len(progresses)):
@@ -22,16 +22,8 @@ def solution1(progresses, speeds):
 
     return answer
 
-def solution(progresses, speeds):
-    answer = []
-    count=0
-    time=0
-    while progresses:
-        if p
 
-
-
-solution([93, 30, 55],[1, 30, 5])
+solution([93, 30, 55], [1, 30, 5])
 
 
 """

@@ -27,7 +27,7 @@ def solution(k, tangerine):
             fruit_count[t] = 1
 
     fruit_count = sorted(fruit_count.items(), key=lambda x: (-x[1]))
-    print(fruit_count)
+
     for _, v in fruit_count:
         k -= v
         answer += 1
