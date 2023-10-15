@@ -1,65 +1,55 @@
 # 이중 투포인터 이용
-def solution(people, limit):
-    answer=0
-    people.sort()
-    left=0
-    right=len(people)-1
+"""
+O(nlogn) 정렬
+"""
 
-    while left<=right:
-        if people[left]+people[right]<=limit:
-            left+=1
-            right-=1
+
+def solution(people, limit):
+    answer = 0
+    people.sort()
+    left = 0
+    right = len(people) - 1
+
+    while left <= right:
+        if people[left] + people[right] <= limit:
+            left += 1
+            right -= 1
         else:
-            right-=1
-        answer+=1
+            right -= 1
+        answer += 1
 
     return answer
-    
 
-# 시간 초과! 
+
+"""
+ O(n^2) , 삭제연산
+"""
+
+
+# 시간 초과!
 class Test1:
     def solution(people, limit):
         answer = 0
         people.sort()
-        while len(people)>0:
+        while len(people) > 0:
             # 그리디 !!  가장 가벼운 사람 + 가장 무거운 사람 한 번에 타기
-            if people[0]+people[-1]<=limit:
-                people=people[1:len(people)-1]
-                answer+=1
+            if people[0] + people[-1] <= limit:
+                people = people[1 : len(people) - 1]
+                answer += 1
             # 안 되면 가장 무거운 사람만 타야지
             else:
                 people.pop()
-                answer+=1
+                answer += 1
         return answer
 
-solution([70, 80, 50],100)
+
+solution([70, 80, 50], 100)
+
+"""
+"""
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
+"""
 무인도에 갇힌 사람들을 구명보트를 이용하여 구출하려고 합니다. 구명보트는 작아서 한 번에 최대 2명씩 밖에 탈 수 없고, 무게 제한도 있습니다.
 
 예를 들어, 사람들의 몸무게가 [70kg, 50kg, 80kg, 50kg]이고 구명보트의 무게 제한이 100kg이라면 2번째 사람과 4번째 사람은 같이 탈 수 있지만 1번째 사람과 3번째 사람의 무게의 합은 150kg이므로 구명보트의 무게 제한을 초과하여 같이 탈 수 없습니다.
@@ -77,4 +67,4 @@ solution([70, 80, 50],100)
 people	limit	return
 [70, 50, 80, 50]	100	3
 [70, 80, 50]	100	3
-'''
+"""
